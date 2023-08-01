@@ -1,3 +1,13 @@
+terraform {
+    backend "s3" {
+        bucket = "bucket2storestatefile"
+        key = "state/terraform.tfstate"
+        region = "us-east-1"
+        dynamodb_table = "tolockstatefile"
+    }
+}
+
+
 # terraform {
 #     required_version = "~> 1.5.3"
 #     required_providers {
